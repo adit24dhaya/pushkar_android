@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">color_pallet</string>
+    <string name="red">RED</string>
+    <string name="green">GREEN</string>
+    <string name="blue">BLUE</string>
+    <string name="_0">0</string>
+</resources>

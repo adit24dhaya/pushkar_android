@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+        <!-- Color view that displays the resulting color -->
+
+        <!-- Group for Switches, SeekBars, and EditTexts -->
+
+        <!-- Reset Button -->
+        <View
+            android:id="@+id/colorView"
+            android:layout_width="404dp"
+            android:layout_height="126dp"
+            android:layout_margin="16dp"
+            android:background="#FFFF00"
+            app:layout_constraintBottom_toTopOf="@+id/switchGroup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/switchGroup"
+            android:layout_width="413dp"
+            android:layout_height="162dp"
+            android:layout_margin="16dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/colorView">
+
+                <!-- Green Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/switch1"
+                            android:layout_width="49dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/red"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                        <SeekBar
+                            android:id="@+id/seekBar4"
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="2"
+                            android:max="255"
+                            android:min="0"
+                            android:progress="0" />
+
+                        <EditText
+                            android:id="@+id/editTextRed"
+                            android:layout_width="55dp"
+                            android:layout_height="match_parent"
+                            android:importantForAutofill="no"
+                            android:inputType="numberDecimal"
+                            android:text="@string/_0"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/switch2"
+                            android:layout_width="49dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/green"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                        <SeekBar
+                            android:id="@+id/seekBar5"
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="2"
+                            android:max="255"
+                            android:min="0"
+                            android:progress="0" />
+
+                        <EditText
+                            android:id="@+id/editTextGreen"
+                            android:layout_width="55dp"
+                            android:layout_height="match_parent"
+                            android:importantForAutofill="no"
+                            android:inputType="numberDecimal"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Blue Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/switch3"
+                            android:layout_width="49dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/blue"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                        <SeekBar
+                            android:id="@+id/seekBar6"
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="2"
+                            android:max="255"
+                            android:min="0"
+                            android:progress="0" />
+
+                        <EditText
+                            android:id="@+id/editTextBlue"
+                            android:layout_width="55dp"
+                            android:layout_height="match_parent"
+                            android:importantForAutofill="no"
+                            android:inputType="numberDecimal"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+                </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="100dp"
+            android:layout_height="43dp"
+            android:layout_margin="16dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#3682BB"
+            android:text="Reset"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switchGroup" />
+</androidx.constraintlayout.widget.ConstraintLayout>
